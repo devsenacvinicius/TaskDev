@@ -1,10 +1,27 @@
-// dom.js
+// dom.jss
 export function obterTextoTarefa() {
     return document.querySelector("#input-tarefa").value;
 }
 // Função para limpar o campo do input após adicionar uma tarefa
 export function limparInput() {
     document.querySelector("#input-tarefa").value = "";
+}
+
+// Função para renderizar a lista de tarefas no DOM
+export function renderizarTarefas(tarefas) {
+    const lista = document.querySelector("#lista-tarefas")
+    lista.innerHTML = "";
+
+    tarefas.forEach((tarefa) => {
+        const li = document.createElement("li");
+        li.textContent = tarefa.texto;
+    
+        if (tarefa.concluida) {
+        li.style.textDecoration = "line-trough";
+        }
+    
+lista.appendChild(li);
+});
 }
 
 // Função para adicionar uma nova tarefa à lista de tarefas no DOM

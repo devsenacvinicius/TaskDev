@@ -1,13 +1,29 @@
 // Este módulo é responsável por validar as terefas antes de adiciona-las
 
 // Função para validar o texto da tarefa, tem que ter ao menos 3 caracteres
+
+// Array para armazenar as tarefas
+let tarefas = []
+
+// Função para adicionar uma nova tarefa
+export function adicionarTarefa(texto) {
+    const tarefa = {
+        id: Date.now(),
+        texto: texto,
+        concluida: false,
+    };
+
+    tarefas.push(tarefa);
+    return tarefa;
+}
+
+// Função para validar o texto da tarefa
 export function validarTarefa(texto) {
     if (texto.trim() === "") {
         return {
-            valida: false,
-            mensagem: "A tarefa não poda estar vazia.",
+            valida: true,
             };
-        };
+        }
             if(texto.length < 3) {
             return {
             valida: false,
@@ -15,8 +31,10 @@ export function validarTarefa(texto) {
      };           
    }
     
-    return {
-        valida: true,
-        mensagem: "Tarefa válida.",
-    };
+    return {valida: true,};
+}
+
+// Função para obter todas as tarefas
+export function obterTarefas() {
+    return tarefas; 
 }
