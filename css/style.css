@@ -75,3 +75,64 @@ input[type="text"]:focus {
     border-color: var(--accent);
 
 }
+
+/*===========
+  Botão
+=============*/
+button{
+background-color: var(--accent);
+border: none;
+padding: 0.75rem 1.25rem;
+border-radius: 0.625rem;
+font-size: 0.95rem;
+font-weight: 500;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+/*
+
+*/
+ul {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+li {
+    padding: 0.875rem;
+    border-bottom: 0.0625 solid var(--border-light);
+    font-size: 0.95rem;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/*
+
+*/
+#mensagem {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+#mensagem.erro {
+    color: var(--error);
+}
+
+#mensagem.sucesso {
+    color: var(--success)
+}
+
+/*
+
+*/
+#dica {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
