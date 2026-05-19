@@ -73,8 +73,5 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none;
     border-color: var(--accent);
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 75b140c43660e3c09918c98ec4d12045cfffaf43
