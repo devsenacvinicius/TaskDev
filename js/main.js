@@ -28,4 +28,5 @@ form.addEventListener("submit", function (event) {
     renderizarTarefas(obterTarefas());
     exibirMensagem("Tarefa adicionada com sucesso!", "sucesso");
     limparInput();
+
 });
